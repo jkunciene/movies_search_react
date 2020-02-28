@@ -2,9 +2,12 @@ import React, {Component} from "react"
 
 
 function Search(props) {
+    if(props.data.Response !== "False"){
     return (
+
         <div className="container">
-            <table class="table table-dark">
+
+            <table className="table table-dark">
                 <thead>
                 <tr>
                     <th scope="col">#</th>
@@ -24,11 +27,13 @@ function Search(props) {
 
                 </tr>
 
+
                 </tbody>
             </table>
 
+
         </div>
-    );
+    ); } else return(<h3>Nerasta</h3>)
 }
 
 export default Search;

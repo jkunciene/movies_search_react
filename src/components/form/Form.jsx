@@ -6,6 +6,7 @@ class Form extends Component {
         super(props);
         this.state = {paieskosZodis: '', movies: {}};
 
+
         this.handleChange = this.handleChange.bind(this);
         this.handleSubmit = this.handleSubmit.bind(this);
     }
@@ -24,13 +25,9 @@ class Form extends Component {
                     this.setState({
                         movies: data
                     })
-                    console.log(this.state.movies);
-                }
+                    console.log(this.state.movies); }
             )
     }
-
-
-
     render() {
 
         return (
@@ -43,10 +40,8 @@ class Form extends Component {
 
                 <input type="submit" value="Submit" />
             </form>
-               <Search data={this.state.movies}/>
+                <Search data={this.state.movies}/>
             </div>
-
-
         );
     }
 }
