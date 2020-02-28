@@ -6,33 +6,11 @@ import Form from "../form/Form";
 
 //react.component jei virsuje neimpoirtuoju
 
-class Main extends Component{
-
-    constructor(props) {
-        super(props)
-        this.state = {
-            movies: [] //tuscias state vietovems
-        }
-    }
-
-
-
-    render(){
-
-        const postMovies = this.state.movies.map;
-        return(
-            <main>
-                <div className="row">
-
-                    {postMovies}
-
-                    <Form />
-                </div>
-
-            </main>
-        );
-
-    }
-
+function Main() {
+    return (
+        <div className="container">
+<Form/>
+        </div>
+    );
 }
 export default Main;

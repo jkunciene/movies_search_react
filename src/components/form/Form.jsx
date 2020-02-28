@@ -1,10 +1,10 @@
 import React, {Component} from "react"
+import Search from "../search/Search";
 
 class Form extends Component {
     constructor(props) {
         super(props);
-        this.state = {paieskosZodis: ''};
-
+        this.state = {paieskosZodis: '', movies: {}};
 
         this.handleChange = this.handleChange.bind(this);
         this.handleSubmit = this.handleSubmit.bind(this);
@@ -15,7 +15,7 @@ class Form extends Component {
     }
 
     handleSubmit(event) {
-        alert('A name was submitted: ' + this.state.paieskosZodis);
+
         event.preventDefault();
         fetch(`https://www.omdbapi.com/?apikey=e4db3ced&t=${this.state.paieskosZodis}`)
             .then(response => response.json())
@@ -32,15 +32,21 @@ class Form extends Component {
 
 
     render() {
+
         return (
+            <div>
             <form onSubmit={this.handleSubmit}>
                 <label>
-                   Ieskomo filmo pavadinimas:
+                    Ieskomo filmo pavadinimas:
                     <input type="text" value={this.state.paieskosZodis} onChange={this.handleChange} />
                 </label>
 
                 <input type="submit" value="Submit" />
             </form>
+               <Search data={this.state.movies}/>
+            </div>
+
+
         );
     }
 }
