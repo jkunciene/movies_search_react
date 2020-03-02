@@ -31,7 +31,7 @@ class Form extends Component {
     render() {
 
         return (
-            <div>
+            <div className="container">
             <form onSubmit={this.handleSubmit}>
                 <label>
                     Ieskomo filmo pavadinimas:

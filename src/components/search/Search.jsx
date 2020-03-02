@@ -15,6 +15,7 @@ function Search(props) {
                     <th scope="col">Description</th>
                     <th scope="col">Director</th>
                     <th scope="col">Runtime</th>
+                    <th scope="col">Foto</th>
                 </tr>
                 </thead>
                 <tbody>
@@ -24,6 +25,7 @@ function Search(props) {
                     <td>{props.data.Plot}</td>
                     <td>{props.data.Director}</td>
                     <td>{props.data.Runtime}</td>
+                    <td><img src = {props.data.Poster}/></td>
 
                 </tr>
 
