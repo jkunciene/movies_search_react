@@ -1,5 +1,4 @@
-import React, {Component} from "react"
-
+import React from "react"
 
 function Search(props) {
     if(props.data.Response !== "False"){
